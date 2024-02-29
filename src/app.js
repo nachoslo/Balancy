@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://balancy.vercel.app/", //ahora solo este puede conectarse
+    origin: "https://balancy.vercel.app", //ahora solo este puede conectarse
     credentials: true, //para pasarle las cookies tambien
   })
 ); //permite que todos los dominios se puedan comunicar, le pidan datos
