@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173", //ahora solo este puede conectarse
+    origin: "https://balancy.netlify.app", //ahora solo este puede conectarse
     credentials: true, //para pasarle las cookies tambien
   })
 ); //permite que todos los dominios se puedan comunicar, le pidan datos
