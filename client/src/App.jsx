@@ -12,7 +12,7 @@ import "./index.css";
 import NotFound from "./pages/NotFound";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
-import VerifyResetPasswowrd from "./verifyResetPassword";
+import VerifyResetPasswowrd from "./VerifyResetPassword";
 
 function App() {
   return (
