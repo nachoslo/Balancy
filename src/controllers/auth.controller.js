@@ -145,7 +145,7 @@ export const forgotPassword = async (req, res) => {
           to: email,
           subject: "Reset Account Password Link",
           html: `<h2> Please visit the link below to reset your password </h2>
-              <a href="http://localhost:5173/login/forgot-password/${token}">http://localhost:5173/login/forgot-password/${token}<a/>
+              <a href="https://balancy.vercel.app/login/forgot-password/${token}">https://balancy.vercel.app/login/forgot-password/${token}<a/>
         `,
         };
         transporter.sendMail(mailOptions, function (error, body) {
