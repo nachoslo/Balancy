@@ -62,7 +62,7 @@ export const login = async (req, res) => {
       }
     );
 
-    res.cookie("token", token, { httpOnly: false });
+    res.cookie("token", token, { sameSite: "none" });
 
     res.json({
       name: userFound.name,
