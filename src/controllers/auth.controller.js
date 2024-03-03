@@ -62,7 +62,7 @@ export const login = async (req, res) => {
       }
     );
 
-    res.cookie("token", token, { sameSite: "none" });
+    res.cookie("token", token, { sameSite: "none", secure: true });
 
     res.json({
       name: userFound.name,
@@ -121,42 +121,46 @@ export const forgotPassword = async (req, res) => {
     if (userFound.length === 0)
       return res.status(400).json(["Email no encontrado"]);
 
-    jwt.verify(userFound.resetPassword, process.env.TOKEN_SECRET, async (err, user) => {
-      if (err) {
-        const token = await createAccessToken(
-          { email },
-          {
-            expiresIn: "15m",
-          }
-        );
+    jwt.verify(
+      userFound.resetPassword,
+      process.env.TOKEN_SECRET,
+      async (err, user) => {
+        if (err) {
+          const token = await createAccessToken(
+            { email },
+            {
+              expiresIn: "15m",
+            }
+          );
 
-        await User.findOneAndUpdate({ email }, { resetPassword: token });
+          await User.findOneAndUpdate({ email }, { resetPassword: token });
 
-        const transporter = nodemailer.createTransport({
-          service: "gmail",
-          auth: {
-            user: "nachobaez.dev@gmail.com",
-            pass: "kgep nutw huky yxos",
-          },
-        });
+          const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+              user: "nachobaez.dev@gmail.com",
+              pass: "kgep nutw huky yxos",
+            },
+          });
 
-        const mailOptions = {
-          from: "noreply@balancy.com",
-          to: email,
-          subject: "Reset Account Password Link",
-          html: `<h2> Please visit the link below to reset your password </h2>
+          const mailOptions = {
+            from: "noreply@balancy.com",
+            to: email,
+            subject: "Reset Account Password Link",
+            html: `<h2> Please visit the link below to reset your password </h2>
               <a href="https://balancy.vercel.app/login/forgot-password/${token}">https://balancy.vercel.app/login/forgot-password/${token}<a/>
         `,
-        };
-        transporter.sendMail(mailOptions, function (error, body) {
-          if (error) return res.status(400).json(error);
-        });
-        return res.json(
-          "Email enviado. Te redireccionaremos al inicio de sesión."
-        );
+          };
+          transporter.sendMail(mailOptions, function (error, body) {
+            if (error) return res.status(400).json(error);
+          });
+          return res.json(
+            "Email enviado. Te redireccionaremos al inicio de sesión."
+          );
+        }
+        res.status(401).json(["Inténtalo de nuevo más tarde."]);
       }
-      res.status(401).json(["Inténtalo de nuevo más tarde."]);
-    });
+    );
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
