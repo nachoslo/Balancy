@@ -10,9 +10,11 @@ import walletsRoutes from "./routes/wallets.routes.js";
 
 const app = express();
 
+const origin = process.env.ORIGIN_CORS || "http://localhost:5173";
+
 app.use(
   cors({
-    origin: process.env.ORIGIN_CORS, //ahora solo este puede conectarse
+    origin, //ahora solo este puede conectarse
     credentials: true, //para pasarle las cookies tambien
   })
 ); //permite que todos los dominios se puedan comunicar, le pidan datos

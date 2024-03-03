@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 export const authRequired = (req, res, next) => {
   //cuando enviamos el login el cookie con el token se guarda en el Header y lo llamamos con req.headers.cookie o req.cookies
   const { token } = req.cookies;
-  console.log(req)
+  console.log(req.cookies)
 
   //cuando damos logout recordemos que vaciamos el token
   if (!token)
