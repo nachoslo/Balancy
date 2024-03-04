@@ -52,12 +52,15 @@ function WalletFormPage() {
 
   const onSubmit = handleSubmit(async (data) => {
     if (params.id) {
+      document.getElementById("wallet-btn").classList.add("animate-pulse");
       const res = await updateWallet(params.id, data);
       if (res.status === 200) navigate("/wallets");
     } else {
+      document.getElementById("wallet-btn").classList.add("animate-pulse");
       const res = await createWallet(data);
       if (res.status === 200) navigate("/wallets");
     }
+    document.getElementById("wallet-btn").classList.remove("animate-pulse");
   });
 
   return (
@@ -248,7 +251,10 @@ function WalletFormPage() {
                 )
               )}
             </div>
-            <button className="py-2 bg-pink-700 rounded-md hover:bg-pink-600">
+            <button
+              id="wallet-btn"
+              className="py-2 bg-pink-700 rounded-md hover:bg-pink-600"
+            >
               Guardar
             </button>
           </form>

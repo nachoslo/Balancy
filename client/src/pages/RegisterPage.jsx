@@ -36,7 +36,9 @@ function RegisterPage() {
   }, [isAuthenticated]);
 
   const onSubmit = handleSubmit(async (values) => {
-    signUp(values);
+    document.getElementById("register-btn").classList.add("animate-pulse");
+    await signUp(values);
+    document.getElementById("register-btn").classList.remove("animate-pulse");
   });
 
   return (
@@ -197,6 +199,7 @@ function RegisterPage() {
         </div>
         <button
           type="submit"
+          id="register-btn"
           className="py-2 bg-pink-700 rounded-md hover:bg-pink-600"
         >
           Registrarse

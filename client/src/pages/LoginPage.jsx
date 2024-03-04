@@ -14,8 +14,10 @@ function LoginPage() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = handleSubmit((values) => {
-    signIn(values);
+  const onSubmit = handleSubmit(async (values) => {
+    document.getElementById("login-btn").classList.add("animate-pulse");
+    await signIn(values);
+    document.getElementById("login-btn").classList.remove("animate-pulse");
   });
 
   useEffect(() => {
@@ -43,9 +45,7 @@ function LoginPage() {
             <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
             <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z" />
           </svg>
-          <h1 className="text-3xl font-bold text-white sm:text-4xl">
-            Balancy
-          </h1>
+          <h1 className="text-3xl font-bold text-white sm:text-4xl">Balancy</h1>
         </Link>
         <form
           onSubmit={onSubmit}
@@ -94,6 +94,7 @@ function LoginPage() {
           </div>
           <button
             type="submit"
+            id="login-btn"
             className="py-2 bg-pink-700 rounded-md hover:bg-pink-600"
           >
             Iniciar sesión

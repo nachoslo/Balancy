@@ -13,13 +13,15 @@ function ForgotPassword() {
   } = useForm();
 
   const onSubmit = handleSubmit(async (values) => {
+    document.getElementById("forgot-btn").classList.add("animate-pulse");
     const res = await forgotPassword(values);
-
+    
     if (res.status === 200) {
       let text = document.querySelector(".forgot-password-text")
-
+      
       text.textContent = res.data;
       text.classList.add("text-emerald-400")
+      document.getElementById("forgot-btn").classList.remove("animate-pulse");
 
       setTimeout(() => {
         navigate("/login");
@@ -30,7 +32,9 @@ function ForgotPassword() {
 
       text.textContent = res.data
       text.classList.add("text-rose-700")
+      document.getElementById("forgot-btn").classList.remove("animate-pulse");
     }
+    document.getElementById("forgot-btn").classList.remove("animate-pulse");
   });
 
   return (
@@ -73,6 +77,7 @@ function ForgotPassword() {
         )}
         <button
           type="submit"
+          id="forgot-btn"
           className="w-full py-2 bg-pink-700 rounded-md hover:bg-pink-600"
         >
           Enviar email
