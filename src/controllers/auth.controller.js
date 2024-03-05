@@ -62,7 +62,7 @@ export const login = async (req, res) => {
       }
     );
 
-    res.cookie("token", token, { sameSite: "none", secure: true });
+    res.cookie("token", token, { sameSite: "none", secure: true, httpOnly = true, maxAge = 1000 * 60 * 60 * 24 * 30 });
 
     res.json({
       name: userFound.name,
