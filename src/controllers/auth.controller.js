@@ -62,7 +62,7 @@ export const login = async (req, res) => {
       }
     );
 
-    res.cookie("token", token, { sameSite: "lax", secure: true, httpOnly: true, domain: "balancy.onrender.com" });
+    res.cookie("token", token, { sameSite: "none", secure: true });
 
     res.json({
       name: userFound.name,
