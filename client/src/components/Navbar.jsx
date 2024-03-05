@@ -36,8 +36,8 @@ function Navbar() {
               <li
                 className={
                   mobile
-                    ? "text-base text-nowrap font-bold h-6 mb-5 md:h-5 select-none md:mb-0"
-                    : "text-base text-nowrap font-bold h-6 md:h-5 select-none"
+                    ? "text-base text-nowrap font-bold h-6 mb-5 md:h-5 select-none whitespace-nowrap md:mb-0"
+                    : "text-base text-nowrap font-bold h-6 whitespace-nowrap md:h-5 select-none"
                 }
               >
                 Hola{" "}

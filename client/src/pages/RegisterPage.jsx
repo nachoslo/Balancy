@@ -43,6 +43,16 @@ function RegisterPage() {
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center gap-4 sm:gap-8">
+      <div className="text-xs text-neutral-600 text-center flex flex-col md:text-sm ">
+        <p className="text-neutral-400">
+          REGISTRARSE NO ES NECESARIO por el momento, usá las credenciales que
+          figuran en el inicio de sesión.
+        </p>
+        <p>
+          Inhabilitamos la verificación al momento de registrarse para probar la
+          app de una forma más rapida.
+        </p>
+      </div>
       <Link to="/" className="flex justify-center items-center gap-2">
         <svg
           viewBox="0 0 16 16"
