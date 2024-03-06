@@ -64,7 +64,7 @@ export const login = async (req, res) => {
 
     res.cookie("token", token, {
       domain: "balancy.vercel.app",
-      sameSite: "lax",
+      sameSite: "none",
       secure: true,
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 30,
