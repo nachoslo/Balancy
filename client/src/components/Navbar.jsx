@@ -29,7 +29,7 @@ function Navbar() {
             <ul
               className={
                 mobile
-                  ? "fixed top-0 right-0 w-1/2 h-screen flex flex-col justify-center items-center bg-neutral-950/50 backdrop-blur-md border-l border-l-pink-950 sm:w-1/3 md:static md:flex md:flex-row md:gap-4 md:w-auto md:h-auto md:border-none md:backdrop-blur-none md:bg-none xl:gap-8"
+                  ? "fixed top-0 right-0 w-1/2 min-h-svh flex flex-col justify-center items-center bg-neutral-950/50 backdrop-blur-md border-l border-l-pink-950 sm:w-1/3 md:static md:flex md:flex-row md:gap-4 md:w-auto md:h-auto md:border-none md:backdrop-blur-none md:bg-none xl:gap-8"
                   : "flex justify-center items-center md:gap-4 xl:gap-8"
               }
             >

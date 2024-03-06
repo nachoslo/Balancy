@@ -38,7 +38,7 @@ function ForgotPassword() {
   });
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center gap-4 sm:gap-8">
+    <div className="min-h-svh flex flex-col justify-center items-center gap-4 sm:gap-8">
       <Link to="/" className="flex justify-center items-center gap-2">
         <svg
           viewBox="0 0 16 16"

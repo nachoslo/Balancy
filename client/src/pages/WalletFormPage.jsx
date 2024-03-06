@@ -68,7 +68,7 @@ function WalletFormPage() {
       {loadingW ? (
         <Loader />
       ) : (
-        <div className="w-full h-screen flex justify-center items-center">
+        <div className="w-full min-h-svh flex justify-center items-center">
           <form
             onSubmit={onSubmit}
             className="flex flex-col gap-4 p-8 bg-neutral-700/30 rounded-md shadow-md"

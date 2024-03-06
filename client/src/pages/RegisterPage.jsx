@@ -42,7 +42,7 @@ function RegisterPage() {
   });
 
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center gap-4 sm:gap-8">
+    <div className="w-full min-h-svh flex flex-col justify-center items-center gap-4 sm:gap-8">
       <div className="text-xs text-neutral-600 text-center flex flex-col md:text-sm ">
         <p className="text-neutral-400">
           REGISTRARSE NO ES NECESARIO por el momento, usá las credenciales que

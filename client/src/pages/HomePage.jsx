@@ -22,9 +22,9 @@ function HomePage() {
       <div className="min-h-screen flex flex-col justify-around items-center gap-8 pt-16 md:pt-28 overflow-x-hidden">
         <div className="mt-6 flex flex-col justify-center items-center gap-4 md:gap-8">
           <p className="text-xs text-neutral-400 text-center md:text-sm">
-            Por el momento Balancy solo funciona en dispositivos de escritorio
+            Por el momento Balancy no funciona en Safari
             debido a que el proyecto no se encuentra hosteado en un único
-            dominio y los navegadores móviles no soportan las third party
+            dominio y los navegadores de Safari por defecto no soportan las third-party
             cookies necesarias para la autenticación.
           </p>
           <h3 className="relative text-xs text-neutral-200 px-6 py-2 bg-neutral-700/30 border-neutral-700 border rounded-2xl shadow-md md:text-sm">

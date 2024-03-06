@@ -10,7 +10,7 @@ function ProfilePage() {
   const year = date.getFullYear();
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center gap-4">
+    <div className="min-h-svh flex flex-col justify-center items-center gap-4">
       <div className="p-4 bg-neutral-700/30 rounded-full shadow">
         <svg
           version="1.1"
