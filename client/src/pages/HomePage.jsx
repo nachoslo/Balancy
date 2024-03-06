@@ -22,7 +22,7 @@ function HomePage() {
       <div className="min-h-screen flex flex-col justify-around items-center gap-8 pt-16 md:pt-28 overflow-x-hidden">
         <div className="mt-6 flex flex-col justify-center items-center gap-4 md:gap-8">
           <p className="text-xs text-neutral-400 text-center md:text-sm">
-            Por el momento Balancy no funciona en Safari
+            Por el momento la creación de wallets no funciona en Safari
             debido a que el proyecto no se encuentra hosteado en un único
             dominio y los navegadores de Safari por defecto no soportan las third-party
             cookies necesarias para la autenticación.

@@ -55,10 +55,9 @@ function WalletsPages() {
           <Navbar />
           <div className="w-full min-h-screen pt-20 flex flex-col items-center gap-8 md:gap-10 md:pt-24">
             <div className="w-full flex flex-col gap-4">
-              <div className="text-sm p-6 bg-neutral-700/30 border-neutral-700 border rounded-2xl shadow-md md:text-base">
+              <div className="text-sm text-center p-6 bg-neutral-700/30 border-neutral-700 border rounded-2xl shadow-md md:text-base">
                 Balancy esta en su version BETA. Por el momento la creacion de
-                wallets se realizara de forma manual hasta conseguir la
-                autorizacion por parte de las billeteras virtuales.
+                wallets en Safari se encuentra deshabilitada.
               </div>
               <div className="w-full flex gap-2 overflow-hidden md:gap-12">
                 <div className="flex gap-2 animate-slideMobile md:gap-12 md:animate-slide">
