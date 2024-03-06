@@ -63,7 +63,7 @@ export const login = async (req, res) => {
     );
 
     res.cookie("token", token, {
-      domain: "balancy.vercel.app",
+      domain: "balancy.onrender.com/api",
       sameSite: "none",
       secure: true,
       httpOnly: true,
