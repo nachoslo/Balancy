@@ -16,7 +16,7 @@ function About() {
       <div className="text-center w-full flex flex-col justify-center items-center gap-4 md:gap-8">
         <h2 className="font-bold text-pink-700 text-2xl md:text-4xl">Problemática</h2>
         <p>
-          Con la utilizacíon y creación de diversas billeteras virtuales y
+          Con la utilización y creación de diversas billeteras virtuales y
           cuentas online, muchas veces nos encontramos con la dificultad de
           obtener nuestros datos de forma rápida y clara debido a que tanto los
           métodos de autenticación, como las rutas para solicitar nuestros datos
